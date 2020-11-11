@@ -32,11 +32,13 @@ class PostsViewModel @Inject constructor(
             if (cache.isNullOrEmpty()) {
                 val posts = jsonPlaceHolderApi.getPosts()
                 postsLiveData.postValue(posts)
+                networkLiveData.postValue(NetworkState.LOADED)
                 postsDao.insertPosts(posts)
                 val data = postsDao.getAllPosts()
                 Log.d("post in db", "$data")
             } else {
                 postsLiveData.postValue(cache)
+                networkLiveData.postValue(NetworkState.LOADED)
             }
         }
     }

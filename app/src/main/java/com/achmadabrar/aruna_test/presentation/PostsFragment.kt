@@ -1,9 +1,11 @@
 package com.achmadabrar.aruna_test.presentation
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
@@ -43,6 +45,8 @@ class PostsFragment : BaseFragment() {
         search_view_posts.setOnQueryTextListener(object:SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 viewModel.searchByTitle(query)
+                val imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0)
                 return true
             }
 
@@ -80,4 +84,5 @@ class PostsFragment : BaseFragment() {
         recycler_posts.adapter = adapter
         recycler_posts.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
     }
+
 }
