@@ -1,4 +1,4 @@
-package com.achmadabrar.aruna_test.ui
+package com.achmadabrar.aruna_test.presentation
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -38,7 +38,6 @@ class PostsViewModel @Inject constructor(
             } else {
                 postsLiveData.postValue(cache)
             }
-
         }
     }
 
@@ -46,8 +45,12 @@ class PostsViewModel @Inject constructor(
         ioScope.launch {
             val posts = postsDao.getPostBytitle(query)
             val newList = mutableListOf<Post>()
-            newList.add(posts!!)
-            postsLiveData.postValue(newList)
+            if (posts == null) {
+                networkLiveData.postValue(NetworkState.EMPTY)
+            } else {
+                newList.add(posts)
+                postsLiveData.postValue(newList)
+            }
         }
     }
 

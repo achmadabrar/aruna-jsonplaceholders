@@ -1,8 +1,8 @@
-package com.achmadabrar.aruna_test.ui
+package com.achmadabrar.aruna_test.presentation
 
 import android.os.Bundle
 import com.achmadabrar.aruna_test.R
-import com.tokopedia.searchonboardingtokped.core.base.BaseActivity
+import com.achmadabrar.aruna_test.core.base.BaseActivity
 
 class PostsActivity : BaseActivity() {
 

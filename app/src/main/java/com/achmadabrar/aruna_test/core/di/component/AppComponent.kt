@@ -1,12 +1,8 @@
 package com.achmadabrar.aruna_test.core.di.component
 
 import android.app.Application
-import com.achmadabrar.aruna_test.core.di.module.DatabaseModule
-import com.tokopedia.searchonboardingtokped.core.base.BaseApplication
-import com.tokopedia.searchonboardingtokped.core.di.module.ActivityBuildersModule
-import com.tokopedia.searchonboardingtokped.core.di.module.FragmentBuildersModule
-import com.tokopedia.searchonboardingtokped.core.di.module.NetworkModule
-import com.tokopedia.searchonboardingtokped.core.di.module.ViewModelModule
+import com.achmadabrar.aruna_test.core.base.BaseApplication
+import com.achmadabrar.aruna_test.core.di.module.*
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector

@@ -1,4 +1,4 @@
-package com.tokopedia.searchonboardingtokped.core.di.module
+package com.achmadabrar.aruna_test.core.di.module
 
 import com.achmadabrar.aruna_test.data.network.JsonPlaceHolderApi
 import com.google.gson.GsonBuilder

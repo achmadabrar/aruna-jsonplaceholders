@@ -1,15 +1,17 @@
-package com.achmadabrar.aruna_test.ui
+package com.achmadabrar.aruna_test.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.achmadabrar.aruna_test.R
-import com.tokopedia.searchonboardingtokped.core.base.BaseFragment
+import com.achmadabrar.aruna_test.core.base.BaseFragment
+import com.achmadabrar.aruna_test.data.network.NetworkState
 import kotlinx.android.synthetic.main.fragment_main.*
 import javax.inject.Inject
 
@@ -56,6 +58,20 @@ class PostsFragment : BaseFragment() {
                 return true
             }
 
+        })
+
+        viewModel.networkLiveData.observe(viewLifecycleOwner, Observer {
+            if (it.status.equals(NetworkState.Status.EMPTY)) {
+                recycler_posts.visibility = View.GONE
+                tv_not_found.visibility = View.VISIBLE
+            } else if (it.status.equals(NetworkState.Status.SUCCESS)) {
+                recycler_posts.visibility = View.VISIBLE
+                tv_not_found.visibility = View.GONE
+            } else {
+                recycler_posts.visibility = View.GONE
+                tv_not_found.visibility = View.GONE
+                Toast.makeText(requireContext(), "Periksa Koneksi!", Toast.LENGTH_SHORT).show()
+            }
         })
 
     }

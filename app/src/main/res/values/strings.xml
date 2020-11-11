@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">aruna-test</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="data_not_found">Yaah, data tidak ada! coba query yang lengkap</string>
 </resources>

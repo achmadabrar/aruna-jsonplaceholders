@@ -1,4 +1,4 @@
-package com.tokopedia.searchonboardingtokped.core.base
+package com.achmadabrar.aruna_test.core.base
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

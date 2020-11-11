@@ -1,4 +1,4 @@
-package com.tokopedia.searchonboardingtokped.core.di
+package com.achmadabrar.aruna_test.core.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

@@ -1,4 +1,4 @@
-package com.achmadabrar.aruna_test.ui
+package com.achmadabrar.aruna_test.presentation
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

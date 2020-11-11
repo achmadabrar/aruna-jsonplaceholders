@@ -1,10 +1,10 @@
-package com.tokopedia.searchonboardingtokped.core.di.module
+package com.achmadabrar.aruna_test.core.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.achmadabrar.aruna_test.ui.PostsViewModel
-import com.tokopedia.searchonboardingtokped.core.di.ViewModelFactory
-import com.tokopedia.searchonboardingtokped.core.di.ViewModelKey
+import com.achmadabrar.aruna_test.core.di.ViewModelFactory
+import com.achmadabrar.aruna_test.core.di.ViewModelKey
+import com.achmadabrar.aruna_test.presentation.PostsViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

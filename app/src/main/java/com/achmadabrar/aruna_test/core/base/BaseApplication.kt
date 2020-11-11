@@ -1,4 +1,4 @@
-package com.tokopedia.searchonboardingtokped.core.base
+package com.achmadabrar.aruna_test.core.base
 
 import android.content.Context
 import androidx.multidex.MultiDex

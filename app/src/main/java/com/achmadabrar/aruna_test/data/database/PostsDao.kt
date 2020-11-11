@@ -13,5 +13,5 @@ interface PostsDao {
     suspend fun getPostBytitle(title: String?): Post?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertPosts(listProduct: List<Post>)
+    suspend fun insertPosts(listPost: List<Post>)
 }
